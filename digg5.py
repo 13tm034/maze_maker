@@ -1,6 +1,6 @@
 import random
 import time
-
+import sys
 
 
 
@@ -40,7 +40,7 @@ def maze(arr,x,y,xlim,ylim,keiro,count):
   check = chk(arr,xlim,ylim,x,y)
   for i in range(ylim):
     print(arr[i])
-  time.sleep(0.1)
+  time.sleep(0.05)
   if check == 0:
     drc = random.randint(0,3)
     if drc == 0:
@@ -79,14 +79,13 @@ def maze(arr,x,y,xlim,ylim,keiro,count):
     print(x,y)
     keiro.pop()
     maze(arr,x,y,xlim,ylim,keiro,count)
-
  
   
     
   
 
-xlim = 17
-ylim = 17
+xlim = 9
+ylim = 11
 
 arr = [[0 for i in range(xlim)]for j in range(ylim)]
 
@@ -94,7 +93,7 @@ print("")
 
 x = random.randint(1,(xlim-1)/2)*2-1
 y = random.randint(1,(ylim-1)/2)*2-1
-arr[y][x]=1
+arr[y][x]= 1
 
 keiro =[[y,x]]
 count = 0
