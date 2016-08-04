@@ -2,6 +2,10 @@ import random
 import time
 
 
+
+
+
+
 def region(arr,xlim,ylim,xd,yd,xp,yp,x,y):
   if xd < xlim-1 and yd < ylim-1 and xd > 0 and yd > 0:
     if arr[yd][xd] == 0:
